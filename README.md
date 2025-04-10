@@ -2,8 +2,9 @@
 
 📦 **Seen Kino Bot** — bu Telegram uchun mo‘ljallangan keng qamrovli kino bot bo‘lib, foydalanuvchilarga filmlarni kod orqali izlash, yuklab olish, baholash va tavsiyalar olish imkonini beradi. Adminlar esa filmlarni, kanallarni, foydalanuvchilarni boshqarishlari va statistikani kuzatishlari mumkin.
 
-🔗 **Demo**: [@seen_kino_bot](https://t.me/seen_kino_bot)
-👨‍💻 **Dasturchi**: [**Bog'lanish**](https://t.me/roobotmee)
+-🔗 **Demo**: [@seen_kino_bot](https://t.me/seen_kino_bot)
+
+-👨‍💻 **Dasturchi**: [**Bog'lanish**](https://t.me/roobotmee)
 
 ---
 
