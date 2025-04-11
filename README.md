@@ -1,3 +1,4 @@
+
 # 🎬 Kino Bot - Telegram uchun aqlli kino bot
 
 📦 **Kino Bot** — bu Telegram foydalanuvchilari uchun kinolarni izlash, ko‘rish, baholash va tavsiya olish imkonini beruvchi aqlli botdir. Bot **Python** va **Aiogram 3.x** asosida yozilgan bo‘lib, foydalanuvchi va adminlar uchun qulay interfeysga ega.
@@ -46,11 +47,45 @@ Kino Bot sizga quyidagilarni taklif qiladi:
 | Hosting              | Linux server      |
 
 ### 📦 Kutubxonalar
-💻 Foydalanuvchi interfeysi
-🚀 Boshlang'ich xabar
-python
-Copy
-Edit
+
+```
+aiogram==3.0.0b7
+sqlite3
+asyncio
+logging
+python-dotenv
+```
+
+---
+
+## 🏗 Loyihaning tuzilishi
+
+```
+├── main.py
+├── config.py
+├── database/
+│   ├── db_engine.py
+│   ├── models.py
+├── handlers/
+│   ├── start.py
+│   ├── search.py
+│   ├── admin.py
+├── keyboards/
+│   ├── inline.py
+│   ├── reply.py
+├── utils/
+│   ├── helpers.py
+│   ├── logger.py
+├── .env
+```
+
+---
+
+## 💻 Foydalanuvchi interfeysi
+
+### 🚀 Boshlang'ich xabar
+
+```
 🎬 *Assalomu alaykum, {user_name}!* 🤖
 
 ✨ *KinoBotga xush kelibsiz!* Kinolar dunyosiga sayohatga tayyormisiz?
@@ -62,10 +97,11 @@ Quyidagi imkoniyatlardan foydalaning:
 📚 *Yo'riqnoma* - Botdan foydalanish qo'llanmasi
 
 📌 *Eslatma:* Botdan to'liq foydalanish uchun quyidagi kanalga a'zo bo'ling: @kino_kanal
-⌨️ Inline tugmalar
-python
-Copy
-Edit
+```
+
+### ⌨️ Inline tugmalar
+
+```
 keyboard = InlineKeyboardMarkup(row_width=2)
 buttons = [
     InlineKeyboardButton("🔍 Kino qidirish", callback_data="search"),
@@ -73,80 +109,86 @@ buttons = [
     InlineKeyboardButton("⭐ Top 10", callback_data="top10"),
     InlineKeyboardButton("📊 Mening statistikam", callback_data="mystats")
 ]
-
 keyboard.add(*buttons)
-⚙️ Admin paneli
-🛡 Buyruqlar
-/admin – Admin panelga kirish
+```
 
-/panel – Asosiy boshqaruv oynasi
+---
 
-/dashboard – Statistik va sozlamalar
+## ⚙️ Admin paneli
 
-📋 Admin imkoniyatlari
-➕ Kino qo‘shish
+### 🛡 Buyruqlar
 
-➖ Kino o‘chirish
+- `/admin` – Admin panelga kirish
+- `/panel` – Asosiy boshqaruv oynasi
+- `/dashboard` – Statistik va sozlamalar
 
-✏️ Kino tahrirlash
+### 📋 Admin imkoniyatlari
 
-👥 Foydalanuvchilar ro‘yxati
+- ➕ Kino qo‘shish
+- ➖ Kino o‘chirish
+- ✏️ Kino tahrirlash
+- 👥 Foydalanuvchilar ro‘yxati
+- ⛔ Bloklash / 🔓 Blokdan chiqarish
+- 📢 Xabar yuborish
+- 📊 Statistika ko‘rish
+- ⚙️ Sozlamalarni boshqarish
 
-⛔ Bloklash / 🔓 Blokdan chiqarish
+---
 
-📢 Xabar yuborish
+## 🗃️ Ma'lumotlar bazasi
 
-📊 Statistika ko‘rish
+### users jadvali
 
-⚙️ Sozlamalarni boshqarish
+| Maydon          | Tavsifi                     |
+|------------------|-----------------------------|
+| UID              | Foydalanuvchi ID            |
+| Telegram ID      | Telegramdagi ID             |
+| Ism              | Foydalanuvchi ismi          |
+| Familiya         | Foydalanuvchi familiyasi    |
+| Yaratilgan sana  | Ro‘yxatdan o‘tgan vaqt      |
+| Oxirgi faollik   | Oxirgi ishlatgan vaqt       |
+| Status           | Foydalanuvchi holati        |
 
-🗃️ Ma'lumotlar bazasi
-users jadvali
-Maydon	Tavsifi
-UID	Foydalanuvchi ID
-Telegram ID	Telegramdagi ID
-Ism	Foydalanuvchi ismi
-Familiya	Foydalanuvchi familiyasi
-Yaratilgan sana	Ro‘yxatdan o‘tgan vaqt
-Oxirgi faollik	Oxirgi ishlatgan vaqt
-Status	Foydalanuvchi holati
-movies jadvali
-Maydon	Tavsifi
-ID	Kino ID
-Kino kodi	Maxsus kod
-Nomi	Kino nomi
-Tavsifi	Kino haqida izoh
-Reyting	Foydalanuvchilar bahosi
-Yuklangan sana	Qo‘shilgan sana
-ratings jadvali
-Maydon	Tavsifi
-ID	Baholash ID
-Foydalanuvchi	Kim baholadi
-Kino ID	Qaysi kinoga
-Baho	Berilgan baho
-Sharh	Izoh
-Sana	Baholash vaqti
-🔒 Xavfsizlik tizimi
-✅ Kanalga majburiy a’zolik
+### movies jadvali
 
-🔑 Admin autentifikatsiyasi
+| Maydon      | Tavsifi               |
+|--------------|------------------------|
+| ID           | Kino ID                |
+| Kino kodi    | Maxsus kod             |
+| Nomi         | Kino nomi              |
+| Tavsifi      | Kino haqida izoh       |
+| Reyting      | Foydalanuvchilar bahosi|
+| Yuklangan sana | Qo‘shilgan sana     |
 
-🚫 Foydalanuvchi cheklovlari
+### ratings jadvali
 
-🕵️ Harakat monitoringi
+| Maydon        | Tavsifi             |
+|----------------|----------------------|
+| ID             | Baholash ID         |
+| Foydalanuvchi  | Kim baholadi        |
+| Kino ID        | Qaysi kinoga        |
+| Baho           | Berilgan baho       |
+| Sharh          | Izoh                |
+| Sana           | Baholash vaqti      |
 
-🧩 Parol va IP cheklovlar
+---
 
-🛡 SHA-256 bilan shifrlash
+## 🔒 Xavfsizlik tizimi
 
-💾 Muntazam backup
+- ✅ Kanalga majburiy a’zolik
+- 🔑 Admin autentifikatsiyasi
+- 🚫 Foydalanuvchi cheklovlari
+- 🕵️ Harakat monitoringi
+- 🧩 Parol va IP cheklovlar
+- 🛡 SHA-256 bilan shifrlash
+- 💾 Muntazam backup
+- 🔐 SQL injectiondan himoya
 
-🔐 SQL injectiondan himoya
+---
 
-📊 Statistika tizimi
-python
-Copy
-Edit
+## 📊 Statistika tizimi
+
+```
 stats = {
     "users": {
         "total": 1245,
@@ -163,51 +205,51 @@ stats = {
         "load": "34%"
     }
 }
-🚀 Qo‘shimcha funksiyalar
-🔎 Aqlli qidiruv
-Xatoliklarni tuzatish
+```
 
-Sinonimlarni aniqlash
+---
 
-Avtoto‘ldirish imkoniyati
+## 🚀 Qo‘shimcha funksiyalar
 
-🎭 Shaxsiy tavsiyalar
-Ko‘rilgan kinolarga qarab
+### 🔎 Aqlli qidiruv
+- Xatoliklarni tuzatish
+- Sinonimlarni aniqlash
+- Avtoto‘ldirish imkoniyati
 
-Baholar asosida
+### 🎭 Shaxsiy tavsiyalar
+- Ko‘rilgan kinolarga qarab
+- Baholar asosida
+- Do‘stlar faoliyati asosida
 
-Do‘stlar faoliyati asosida
+### 📅 Voqealar taqvimi
+- Yangi chiqqan kinolar
+- Maxsus premyeralar
+- Kino tanlovlari
 
-📅 Voqealar taqvimi
-Yangi chiqqan kinolar
+---
 
-Maxsus premyeralar
+## 🔗 Muhim havolalar
 
-Kino tanlovlari
+- 👨‍💻 **Dasturchi**: [@roobotmee](https://t.me/roobotmee)
+- 🌐 **Vebsayt**: [roobotmee.uz](https://roobotmee.uz)
+- 🤖 **Demo Bot**: [@seen_kino_bot](https://t.me/seen_kino_bot)
 
-🔗 Muhim havolalar
-👨‍💻 Dasturchi: @roobotmee
+---
 
-🌐 Vebsayt: roobotmee.uz
+## 📜 Litsenziya
 
-🤖 Demo Bot: @seen_kino_bot
+MIT Litsenziyasi — batafsil [`LICENSE.md`](LICENSE.md) faylida.
 
-📜 Litsenziya
-MIT Litsenziyasi — batafsil LICENSE.md faylida.
+---
 
-💡 Rivojlanish rejasi
-✅ Asosiy funksiyalar
+## 💡 Rivojlanish rejasi
 
-✅ Admin panel
+- ✅ Asosiy funksiyalar
+- ✅ Admin panel
+- 🔄 Multi-til qo‘llab-quvvatlash
+- 🔄 Playlistlar
+- 🔄 Telegram WebApp integratsiyasi
 
-🔄 Multi-til qo‘llab-quvvatlash
+---
 
-🔄 Playlistlar
-
-🔄 Telegram WebApp integratsiyasi
-
-🎉 Kino Bot — har kuni yangi filmlar va qulay interfeys bilan sizni kutmoqda!
-
-
-
-Agar istasang, bu faylni `.md` formatida tayyorlab ham bera olaman — yoki GitHub sahifangga qo‘yish bo‘yich
+🎉 **Kino Bot** — har kuni yangi filmlar va qulay interfeys bilan sizni kutmoqda!
