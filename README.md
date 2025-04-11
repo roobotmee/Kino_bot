@@ -1,160 +1,240 @@
-# 🎬 Seen Kino Bot
+# 🎬 Kino Bot - Telegram uchun aqlli kino bot
 
-📦 **Seen Kino Bot** — bu Telegram uchun mo‘ljallangan keng qamrovli kino bot bo‘lib, foydalanuvchilarga filmlarni kod orqali izlash, yuklab olish, baholash va tavsiyalar olish imkonini beradi. Adminlar esa filmlarni, kanallarni, foydalanuvchilarni boshqarishlari va statistikani kuzatishlari mumkin.
-
--🔗 **Demo**: [@seen_kino_bot](https://t.me/seen_kino_bot)
-
--👨‍💻 **Dasturchi**: [**Bog'lanish**](https://t.me/roobotmee)
+📦 **Kino Bot** — bu Telegram foydalanuvchilari uchun kinolarni izlash, ko‘rish, baholash va tavsiya olish imkonini beruvchi aqlli botdir. Bot **Python** va **Aiogram 3.x** asosida yozilgan bo‘lib, foydalanuvchi va adminlar uchun qulay interfeysga ega.
 
 ---
 
-## 🚀 Asosiy Funktsiyalar
+## 📌 Umumiy ma'lumot
 
-### 👤 Foydalanuvchilar Uchun
-
-- 🔍 **Film qidirish**: Nom yoki maxsus kod orqali izlash
-- 🎯 **Film tavsiyalari**: Har kuni sizga film tavsiyalari
-- ⭐ **Reyting tizimi**: Filmlarga baho berish va izoh yozish
-- 🏆 **Eng yuqori baholangan filmlar**: Eng yaxshi filmlarni ko‘rish
-- 🔗 **Oson ulashish**: Film linklarini do‘stlar bilan bo‘lishish
-
-### 👨‍💼 Administratorlar Uchun
-
-- 🎬 **Film boshqaruvi**: Film qo‘shish, tahrirlash, o‘chirish
-- 🚫 **Foydalanuvchi boshqaruvi**: Bloklash / blokdan chiqarish, statistika ko‘rish
-- 📢 **Kanal boshqaruvi**: Majburiy obuna uchun kanal ulash / ajratish
-- 📬 **Xabar yuborish**: Hammani xabardor qilish
-- 🔗 **Maxsus linklar**: Qo‘shimcha havolalarni boshqarish
-- 📊 **Statistika**: Bot ishlash statistikasi
-- 📝 **Matnlar sozlovi**: Bot javoblarini tahrirlash
+Kino Bot sizga quyidagilarni taklif qiladi:
+- 🔍 Kino qidirish (nom yoki maxsus kod orqali)
+- 🎯 Kunlik tavsiyalar
+- ⭐ Reyting asosida eng yaxshi filmlarni ko‘rish
+- 📝 Izoh yozish va ulashish
+- 👨‍💼 Adminlar uchun kuchli boshqaruv paneli
 
 ---
 
+## 🌟 Asosiy imkoniyatlar
 
-📌 Majburiy Obuna va Zayavka Kanali
-📣 Majburiy Kanalga Obuna
-Botdan to‘liq foydalanish uchun foydalanuvchilar belgilangan kanallarga obuna bo‘lishlari majburiy. Admin panel orqali kanal linklarini ulash mumkin.
+### 👤 Foydalanuvchilar uchun
+- 🔍 Kino qidirish (nom yoki kod bo‘yicha)
+- 🎲 Tasodifiy kino olish
+- ⭐ Baholash va izoh yozish
+- 📊 Reytinglar asosida kino topish
+- 📎 Kino linklarini do‘stlar bilan ulashish
 
-🔗 Kanal linklari data/links/ papkasida saqlanadi.
-
-✅ Obuna tekshiruvi avtomatik tarzda amalga oshadi.
-
-⛔ Obuna qilinmagan foydalanuvchilarga bot cheklov qo‘yadi.
-
-📥 Zayavka (Join Request) Kanali
-Bot foydalanuvchi kanalga a'zo bo‘lmagan taqdirda, unga zayavka havolasini yuboradi. Bu orqali foydalanuvchi "kanalga qo‘shilish" so‘rovini yuboradi.
-
-📁 Zayavkalar data/zayavka/ papkasida saqlanadi.
-
-🤖 Bot avtomatik tarzda foydalanuvchi Join Request yuborganligini aniqlaydi.
-
-🔗 Kanalni ulash (adminlar uchun)
-Admin panelga kiring: /panel yoki /admin
-
-💬 "Kanallar" bo‘limiga o‘ting
-
-Ulanmoqchi bo‘lgan kanal havolasini yuboring
-
-Bot avtomatik tarzda havolani channels.txt va links/ papkalariga saqlaydi
-
-💡 Eslatma: Kanalga adminlik huquqi berilgan bo‘lishi kerak, aks holda bot foydalanuvchini a’zo qila olmaydi va holatini tekshira olmaydi.
-
-
-## 💬 Buyruqlar
-
-| Buyruq | Tavsifi |
-|--------|---------|
-| `/start` | Botni boshlash va menyuni ko‘rish |
-| `/rand` | Tasodifiy film olish |
-| `/dev` | Dasturchi haqida |
-| `/help` | Mavjud buyruqlar ro‘yxati |
-| `/panel` yoki `/admin` | Admin panelga kirish (faqat adminlar uchun) |
+### 👨‍💼 Adminlar uchun
+- 🎬 Film qo‘shish, o‘chirish, tahrirlash
+- ⛔ Foydalanuvchini bloklash / 🔓 Blokdan chiqarish
+- 📢 Reklama va umumiy xabar yuborish
+- 📊 Bot statistikasi
+- 📌 Kanalga majburiy obuna sozlamalari
+- 📝 Matnlarni sozlash
 
 ---
 
-## 🛠 Admin Panel Bo‘limlari
+## 🛠 Texnik jihatlar
 
-- 📊 Statistika
-- 🎬 Film qo‘shish / 🗑️ Film o‘chirish
-- 👨‍💼 Adminlar / 💬 Kanallar
-- 🔴 Foydalanuvchini bloklash / 🟢 Blokdan chiqarish
-- ✍️ Xabar yuborish / 📬 Xabar forward qilish
-- 🤖 Bot holati / 📝 Matn sozlamalari
+### 📚 Texnologiyalar
 
----
+| Komponent            | Texnologiya      |
+|----------------------|------------------|
+| Dasturlash tili      | Python 3.10+      |
+| Framework            | Aiogram 3.x       |
+| Ma'lumotlar bazasi   | SQLite 3          |
+| Hosting              | Linux server      |
 
-## 🧩 Texnik Tafsilotlar
+### 📦 Kutubxonalar
 
-### 🗄 Ma'lumotlar Bazasi (SQLite)
-
-- `user_id`: Foydalanuvchi ma'lumotlari va status
-- `data`: Film ma'lumotlari
-- `settings`: Bot konfiguratsiyasi
-- `texts`: Moslashtirilgan javoblar
-
-### 📁 Katalog Struktura
-
-```plaintext
-data/
-├── links/         # Kanal havolalari
-├── zayavka/       # Obuna so‘rovlari
-├── requests/      # Foydalanuvchi so‘rovlari
-├── ratings/       # Film reytinglari
-├── user_views/    # Foydalanuvchi ko‘rgan filmlar
-├── additional.txt # Qo‘shimcha havolalar
-├── users.txt      # Foydalanuvchilar ro‘yxati
-├── admins.txt     # Adminlar ro‘yxati
-├── channels.txt   # Kanal ro‘yxati
-└── ...            # Boshqa sozlamalar
-🔄 Holat Boshqaruvi (FSM)
-Bot FSM (Finite State Machine) yordamida foydalanuvchi amallarini boshqaradi:
-
-Film qo‘shish
-
-Matnlar tahriri
-
-Kanallar boshqaruvi
-
-🧰 O‘rnatish va Ishga Tushirish
-📋 Talablar
-Python 3.7+
-
-aiogram
-
+aiogram==3.0.0b7
 sqlite3
-
-psutil
-
-⚙️ Sozlash
-Repozitoriyani klonlang
-
-Kutubxonalarni o‘rnating:
-
+asyncio
+logging
+python-dotenv
+🏗 Loyihaning tuzilishi
 bash
 Copy
 Edit
-pip install -r requirements.txt
-bot.py faylida bot tokenini kiriting
-
-Admin ID’ni belgilang
-
-Botni ishga tushiring:
-
-bash
+├── main.py
+├── config.py
+├── database/
+│   ├── db_engine.py
+│   ├── models.py
+├── handlers/
+│   ├── start.py
+│   ├── search.py
+│   ├── admin.py
+├── keyboards/
+│   ├── inline.py
+│   ├── reply.py
+├── utils/
+│   ├── helpers.py
+│   ├── logger.py
+├── .env
+💻 Foydalanuvchi interfeysi
+🚀 Boshlang'ich xabar
+python
 Copy
 Edit
-python bot.py
-🔐 Xavfsizlik
-✅ Majburiy kanalga obuna
+🎬 *Assalomu alaykum, {user_name}!* 🤖
+
+✨ *KinoBotga xush kelibsiz!* Kinolar dunyosiga sayohatga tayyormisiz?
+
+Quyidagi imkoniyatlardan foydalaning:
+🔍 *Kino qidirish* - Nom yoki kod bo'yicha izlash
+🎲 *Tasodifiy kino* - Kunlik tavsiya
+⭐ *Top reyting* - Eng yaxshi baholangan filmlar
+📚 *Yo'riqnoma* - Botdan foydalanish qo'llanmasi
+
+📌 *Eslatma:* Botdan to'liq foydalanish uchun quyidagi kanalga a'zo bo'ling: @kino_kanal
+⌨️ Inline tugmalar
+python
+Copy
+Edit
+keyboard = InlineKeyboardMarkup(row_width=2)
+buttons = [
+    InlineKeyboardButton("🔍 Kino qidirish", callback_data="search"),
+    InlineKeyboardButton("🎲 Tasodifiy", callback_data="random"),
+    InlineKeyboardButton("⭐ Top 10", callback_data="top10"),
+    InlineKeyboardButton("📊 Mening statistikam", callback_data="mystats")
+]
+keyboard.add(*buttons)
+⚙️ Admin paneli
+🛡 Buyruqlar
+/admin – Admin panelga kirish
+
+/panel – Asosiy boshqaruv oynasi
+
+/dashboard – Statistik va sozlamalar
+
+📋 Admin imkoniyatlari
+➕ Kino qo‘shish
+
+➖ Kino o‘chirish
+
+✏️ Kino tahrirlash
+
+👥 Foydalanuvchilar ro‘yxati
+
+⛔ Bloklash / 🔓 Blokdan chiqarish
+
+📢 Xabar yuborish
+
+📊 Statistika ko‘rish
+
+⚙️ Sozlamalarni boshqarish
+
+🗃️ Ma'lumotlar bazasi
+users jadvali
+Maydon	Tavsifi
+UID	Foydalanuvchi ID
+Telegram ID	Telegramdagi ID
+Ism	Foydalanuvchi ismi
+Familiya	Foydalanuvchi familiyasi
+Yaratilgan sana	Ro‘yxatdan o‘tgan vaqt
+Oxirgi faollik	Oxirgi ishlatgan vaqt
+Status	Foydalanuvchi holati
+movies jadvali
+Maydon	Tavsifi
+ID	Kino ID
+Kino kodi	Maxsus kod
+Nomi	Kino nomi
+Tavsifi	Kino haqida izoh
+Reyting	Foydalanuvchilar bahosi
+Yuklangan sana	Qo‘shilgan sana
+ratings jadvali
+Maydon	Tavsifi
+ID	Baholash ID
+Foydalanuvchi	Kim baholadi
+Kino ID	Qaysi kinoga
+Baho	Berilgan baho
+Sharh	Izoh
+Sana	Baholash vaqti
+🔒 Xavfsizlik tizimi
+✅ Kanalga majburiy a’zolik
 
 🔑 Admin autentifikatsiyasi
 
-🚫 Foydalanuvchilarni bloklash
+🚫 Foydalanuvchi cheklovlari
 
-📴 Botni yoqish/o‘chirish imkoniyati
+🕵️ Harakat monitoringi
 
-👨‍💻 Dasturchi
-Bot muallifi: @RooBotmee
-Agar sizga shunday yoki boshqa turdagi Telegram bot kerak bo‘lsa, murojat qiling.
+🧩 Parol va IP cheklovlar
 
-📢 Dasturchi kanali: @CodeIsmoilov
+🛡 SHA-256 bilan shifrlash
+
+💾 Muntazam backup
+
+🔐 SQL injectiondan himoya
+
+📊 Statistika tizimi
+python
+Copy
+Edit
+stats = {
+    "users": {
+        "total": 1245,
+        "active": 876,
+        "new_today": 42
+    },
+    "movies": {
+        "total": 567,
+        "views_today": 1234,
+        "top_movie": {"id": 12, "title": "Interstellar", "views": 256}
+    },
+    "system": {
+        "uptime": "4d 12h 23m",
+        "load": "34%"
+    }
+}
+🚀 Qo‘shimcha funksiyalar
+🔎 Aqlli qidiruv
+Xatoliklarni tuzatish
+
+Sinonimlarni aniqlash
+
+Avtoto‘ldirish imkoniyati
+
+🎭 Shaxsiy tavsiyalar
+Ko‘rilgan kinolarga qarab
+
+Baholar asosida
+
+Do‘stlar faoliyati asosida
+
+📅 Voqealar taqvimi
+Yangi chiqqan kinolar
+
+Maxsus premyeralar
+
+Kino tanlovlari
+
+🔗 Muhim havolalar
+👨‍💻 Dasturchi: @roobotmee
+
+🌐 Vebsayt: roobotmee.uz
+
+🤖 Demo Bot: @seen_kino_bot
+
+📜 Litsenziya
+MIT Litsenziyasi — batafsil LICENSE.md faylida.
+
+💡 Rivojlanish rejasi
+✅ Asosiy funksiyalar
+
+✅ Admin panel
+
+🔄 Multi-til qo‘llab-quvvatlash
+
+🔄 Playlistlar
+
+🔄 Telegram WebApp integratsiyasi
+
+🎉 Kino Bot — har kuni yangi filmlar va qulay interfeys bilan sizni kutmoqda!
+
+go
+Copy
+Edit
+
+Agar istasang, bu faylni `.md` formatida tayyorlab ham bera olaman — yoki GitHub sahifangga qo‘yish bo‘yich
