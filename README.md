@@ -208,8 +208,6 @@ MIT Litsenziyasi — batafsil LICENSE.md faylida.
 
 🎉 Kino Bot — har kuni yangi filmlar va qulay interfeys bilan sizni kutmoqda!
 
-go
-Copy
-Edit
+
 
 Agar istasang, bu faylni `.md` formatida tayyorlab ham bera olaman — yoki GitHub sahifangga qo‘yish bo‘yich
