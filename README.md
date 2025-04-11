@@ -46,33 +46,6 @@ Kino Bot sizga quyidagilarni taklif qiladi:
 | Hosting              | Linux server      |
 
 ### 📦 Kutubxonalar
-
-aiogram==3.0.0b7
-sqlite3
-asyncio
-logging
-python-dotenv
-🏗 Loyihaning tuzilishi
-bash
-Copy
-Edit
-\n
-├── main.py
-├── config.py
-├── database/
-│   ├── db_engine.py
-│   ├── models.py
-├── handlers/
-│   ├── start.py
-│   ├── search.py
-│   ├── admin.py
-├── keyboards/
-│   ├── inline.py
-│   ├── reply.py
-├── utils/
-│   ├── helpers.py
-│   ├── logger.py
-├── .env
 💻 Foydalanuvchi interfeysi
 🚀 Boshlang'ich xabar
 python
@@ -100,6 +73,7 @@ buttons = [
     InlineKeyboardButton("⭐ Top 10", callback_data="top10"),
     InlineKeyboardButton("📊 Mening statistikam", callback_data="mystats")
 ]
+
 keyboard.add(*buttons)
 ⚙️ Admin paneli
 🛡 Buyruqlar
