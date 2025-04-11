@@ -56,6 +56,7 @@ python-dotenv
 bash
 Copy
 Edit
+\n
 ├── main.py
 ├── config.py
 ├── database/
