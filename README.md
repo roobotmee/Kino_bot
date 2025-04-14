@@ -1,4 +1,4 @@
-# 🎬 Telegram Movie Bot
+# 🎬 Python Kino Bot
 
 ## 📋 Bot haqida
 Ushbu Telegram bot foydalanuvchilarga kinolarni qidirish, ko'rish va yuklab olish imkoniyatini beradi. Bot majburiy a'zolik, kino reytingi, qidirish va boshqa ko'plab funksiyalarga ega.
